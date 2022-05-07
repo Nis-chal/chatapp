@@ -10,6 +10,8 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
+  late String email;
+  late String password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,6 +34,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
             TextField(
               onChanged: (value) {
+                email = value;
                 //Do something with the user input.
               },
               decoration:
@@ -42,6 +45,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
             TextField(
               onChanged: (value) {
+                password = value;
                 //Do something with the user input.
               },
               decoration:
@@ -52,7 +56,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
             RoundedButton(
               onPressed: () {
-                Navigator.pushNamed(context, RegistrationScreen.id);
+                print(email);
+                print(password);
               },
               title: 'Register',
               colour: Colors.blueAccent,
