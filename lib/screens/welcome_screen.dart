@@ -24,8 +24,8 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       vsync: this,
     );
 
-    animation =
-        ColorTween(begin: Colors.red, end: Colors.blue).animate(controller);
+    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
+        .animate(controller);
 
     // animation = CurvedAnimation(parent: controller, curve: Curves.decelerate);
     controller.forward();
@@ -77,6 +77,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     style: const TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
+                      color: Colors.black,
                     ),
                     child: AnimatedTextKit(
                       pause: Duration(seconds: 1),
